@@ -1,0 +1,105 @@
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+// custom styles should be placed right here
+
+
+a 
+{
+    @apply text-blue-600;
+
+    &:hover
+    {
+        @apply underline bg-transparent text-blue-900;
+    }
+}
+
+a:visited {
+    @apply text-blue-500
+}
+
+
+.form-control
+{
+    @apply bg-gray-100 block w-full pl-4 pr-4 sm:text-sm border-gray-300 rounded;
+
+    &:focus
+    {
+        @apply ring-purple-400 border-purple-400;
+    }
+}
+
+.btn {
+    @apply font-bold py-2 px-4 rounded;
+}
+
+.btn-purple {
+    @apply bg-purple-500 text-white;
+}
+
+.btn-purple:hover {
+    @apply bg-purple-400;
+}
+
+.btn-purple:focus {
+    @apply outline-none;
+}
+
+.btn-group {
+
+    .form-control, .btn {
+        @apply rounded-none;
+    }
+    
+    :first-child {
+        @apply rounded-l;
+    }
+
+    :last-child {
+        @apply rounded-r;
+    }
+}
+
+.field {
+    @apply mb-4;
+}
+
+.nav-link {
+    @apply text-gray-700 mx-2 text-sm;
+}
+
+.nav-link:visited {
+    @apply text-gray-700;
+}
+
+.nav-link:hover {
+    @apply text-black no-underline;
+}
+
+.nav:btn-purple {
+    @apply text-white;
+}
+
+.logo-style {
+
+    @apply text-lg text-gray-700 font-bold;
+
+}
+
+.logo-style:visited {
+    @apply text-gray-700 font-bold;
+}
+
+.logo-style:hover {
+
+    @apply text-xl text-black no-underline;
+    
+}
+
+
+@import "tailwindcss/utilities";
+
+ 
+
+
+
