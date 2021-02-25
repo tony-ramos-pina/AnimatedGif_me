@@ -17,8 +17,10 @@
     <% if form.object.persisted? %>
       <%= image_tag form.object.image_url, class: "mx-auto" %>
     <% else %>
-      <%= form.label :image %>
       <%= form.hidden_field :image, value: form.object.cached_image_data %>
+      <%= form.text_field :image_remote_url, paceholder: "URL to gif", class: "form-control" %> 
+
+      <%= form.label :image, "or upload a gif" %>
       <%= form.file_field :image, class: "form-control" %> 
     <% end %>
   </div>
